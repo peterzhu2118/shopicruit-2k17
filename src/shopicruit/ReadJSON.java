@@ -13,10 +13,9 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
- * 
+ * Reads the JSON file and parses it as objects.
  * 
  * @author Peter Zhu
- * 
  */
 public class ReadJSON {
 	private List<Order> orders;
@@ -59,14 +58,19 @@ public class ReadJSON {
 			}
 		}
 	}
-	
+
+	/**
+	 * Calculates the total of the orders.
+	 * 
+	 * @return The total of the orders
+	 */
 	public double getTotal() {
 		double total = 0;
-		
+
 		for (Order o : orders) {
 			total += o.getTotal();
 		}
-		
+
 		return total;
 	}
 
@@ -80,7 +84,8 @@ public class ReadJSON {
 	private static List<Order> getOrders(JSONArray jsonArray) {
 		List<Order> currentOrders = new ArrayList<>();
 
-		// Loop through every element in the JSONArray.
+		// Loop through every element in the JSONArray and create a new Order
+		// for it.
 		for (int i = 0; i < jsonArray.length(); i++) {
 			JSONObject order = jsonArray.getJSONObject(i);
 
