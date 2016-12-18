@@ -4,4 +4,4 @@ This is my implementation of the Shopicruit program for the 2017 Summer Shopify 
 
 To run this start at `/src/shopicruit/Main.java`.
 
-Total Price is: $15449.72.
+Total Revenue is: $15449.72.
