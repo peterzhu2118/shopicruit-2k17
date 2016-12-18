@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class Main {
 	public static void main(String[] args) {
-		// URL of the JSON pages
+		// URL of the JSON pages.
 		String[] url = {
 				"https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6",
 				"https://shopicruit.myshopify.com/admin/orders.json?page=2&access_token=c32313df0d0ef512ca64d5b336a0d7c6",
@@ -20,7 +20,8 @@ public class Main {
 			
 			double total = read.getTotal();
 			
-			System.out.printf("Total price: %.2f", total);
+			// Formats to two decimal places.
+			System.out.printf("Total Revenue: $%.2f", total);
 		} catch (IOException e) {
 			System.out.println("Cannot read from URL.");
 		}

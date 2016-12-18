@@ -13,7 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
- * Reads the JSON file and parses it as objects.
+ * Reads the JSON file and parses it as Order objects.
  * 
  * @author Peter Zhu
  */
@@ -32,6 +32,7 @@ public class ReadJSON {
 	public ReadJSON(String[] urlList) throws IOException {
 		orders = new ArrayList<>();
 
+		// Read every URL.
 		for (String url : urlList) {
 			// Try-with-resources so streams are automatically closed.
 			try (InputStream stream = new URL(url).openStream();
